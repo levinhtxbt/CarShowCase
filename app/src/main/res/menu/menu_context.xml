@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mnuPicasso"
+        android:title="Picasso Activity"/>
+    <item android:id="@+id/mnuFresco"
+        android:title="Fresco Activity"/>
+    <item android:id="@+id/mnuGlide"
+        android:title="Glide Activity"/>
+</menu>
