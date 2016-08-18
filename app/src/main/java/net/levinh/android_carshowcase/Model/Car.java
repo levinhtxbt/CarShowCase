@@ -2,10 +2,12 @@ package net.levinh.android_carshowcase.Model;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by levinh on 07/08/2016.
  */
-public class Car {
+public class Car implements Serializable{
     private String name;
     private String brand;
     @SerializedName("imageFile")

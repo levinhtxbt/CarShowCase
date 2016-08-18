@@ -11,6 +11,8 @@ import com.squareup.picasso.Picasso;
 import net.levinh.android_carshowcase.Adapter.ViewHolder;
 import net.levinh.android_carshowcase.Model.Car;
 
+import java.util.List;
+
 /**
  * Created by levinhtxbt@gmail.com on 09/08/2016.
  */
@@ -19,7 +21,7 @@ public class CarListPicassoActivity extends BaseActivity {
     private static final String TAG = "CarListPicassoActivity";
 
     @Override
-    protected void onItemClicked(int position, View view,Car car) {
+    protected void onItemClicked(int position, View view, List<Car> car) {
 
     }
 

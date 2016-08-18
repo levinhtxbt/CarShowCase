@@ -54,7 +54,7 @@ public abstract class BaseActivity extends AppCompatActivity {
                 adapter.setOnClickListener(new MyClickListener() {
                     @Override
                     public void onItemClick(int position, View view) {
-                        onItemClicked( position,  view, cars.get(position));
+                        onItemClicked( position,  view, cars);
                     }
                 });
                 adapter.setOnBindViewHolder(new BindViewHolder() {
@@ -66,13 +66,10 @@ public abstract class BaseActivity extends AppCompatActivity {
                 recyclerViewCar.setHasFixedSize(true);
                 recyclerViewCar.setLayoutManager(new LinearLayoutManager(BaseActivity.this));
                 recyclerViewCar.setAdapter(adapter);
-//                Log.d(TAG, "onCarReceived: "+adapter.getItemCount());
-
-
             }
         });
     }
 
-    protected abstract void onItemClicked(int position, View view, Car car);
+    protected abstract void onItemClicked(int position, View view, List<Car> car);
     protected  abstract void onBindItemView(ViewHolder holder, Car item, int position);
 }

@@ -2,6 +2,7 @@ package net.levinh.android_carshowcase.activity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,12 +14,22 @@ import net.levinh.android_carshowcase.Loader.ImageLoaderThread;
 import net.levinh.android_carshowcase.Model.Car;
 import net.levinh.android_carshowcase.R;
 
+import java.io.Serializable;
+import java.util.List;
+
 public class CarListActivity extends BaseActivity {
     private static final String TAG = "CarListActivity";
+    public static final String CAR_DATA = "car";
+    public static final String BUNDLE  = "bundle";
 
     @Override
-    protected void onItemClicked(int position, View view, Car car) {
-        Toast.makeText(this, car.getName() + " ", Toast.LENGTH_SHORT).show();
+    protected void onItemClicked(int position, View view, List<Car> car) {
+
+        Intent intent = new Intent(this,CarDetailsActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt(CAR_DATA,position);
+        intent.putExtra(BUNDLE,bundle);
+        startActivity(intent);
     }
 
     @Override

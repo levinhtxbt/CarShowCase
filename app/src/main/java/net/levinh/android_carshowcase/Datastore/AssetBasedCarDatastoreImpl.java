@@ -41,10 +41,10 @@ public class AssetBasedCarDatastoreImpl implements CarDatastore {
                 for (Car car : cars) {
                     car.setImageUrl("android.resource://net.levinh.android_carshowcase/raw/" + car.getImageUrl());
             }
-                //Duplicate data.
-                for (int i = 0; i < 10; i++) {
-                    cars.addAll(new ArrayList<>(cars));
-                }
+//                //Duplicate data.
+//                for (int i = 0; i < 1; i++) {
+//                    cars.addAll(new ArrayList<>(cars));
+//                }
                 onCarReceivedListener.onCarReceived(cars, null);
             } catch (IOException e) {
                 e.printStackTrace();
